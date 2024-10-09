@@ -11,7 +11,6 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
     - syntax of pointer declaration
     int *pointer;
     pointer = &variable;
-    
     ```
 
     Code:
@@ -21,12 +20,11 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
     int main() {
         int num;
         int *p = &num;
-        scanf("Enter an integer: %d",&num)
+        printf("Enter an integer:");
+        scanf("%d",&num);
         printf("Value of num: %d\n", *p);
         return 0;
     }
-
-
     ```
 
     test cases:
@@ -34,29 +32,23 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
     ```
     Enter an integer: 25
     Value of num: 25
-
-
     ```
     - 2nd
     ```
     Enter an integer: -15
     Value of num: -15
-
-    
     ```
 
     - 3rd
     ```
     Enter an integer: 1000
     Value of num: 1000
-
     ```
 
     - 4th
     ```
     Enter an integer: 0
     Value of num: 0
-
     ```
 2. Quesion:
     ```
@@ -66,8 +58,6 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
     - syntax of pointer dereferencing
     
     *pointer = new_value;
-
-
     ```
 
     Code:
@@ -77,15 +67,15 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
     int main() {
         int num;
         int *p = &num;
-        scanf("Enter an integer: %d",&num)
+        printf("Enter an integer: ");
+        scanf("%d",&num);
         int new_num;
-        *p = num;
-        scanf("Enter new integer: %d",&new_num)
-        printf("New value of num: %d\n", new_num);
+        printf("Enter a new integer: ");
+        scanf("%d",&new_num);
+        *p = new_num;
+        printf("New value of num: %d\n", num);
         return 0;
     }
-
-
     ```
 
     test cases:
@@ -94,14 +84,12 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
     Enter an integer: 10
     Enter new integer: 20
     New value of num: 20
-
     ```
     - 2nd
     ```
     Enter an integer: -10
     Enter new integer: -20
     New value of num: -20
-
     ```
 
     - 3rd
@@ -128,7 +116,6 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
     
     int arr[] = {1, 2, 3};
     int *p = arr;
-
     ```
 
     Code:
@@ -139,16 +126,15 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
         int arr[5];
         int *p = arr;
         printf("Enter 5 integers: ");
+        
         for (int i = 0; i < 5; i++) {
-            scanf("%d", ptr + i); 
+            scanf("%d", p + i); 
         }
-
+    
         printf("First element: %d\n", *p);
         printf("Second element: %d\n", *(p + 1));
         return 0;
     }
-
-
     ```
 
     test cases:
@@ -164,14 +150,12 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
     First element: 10
     Second element: 20
     ```
-
     - 3rd
     ```
     Enter 5 Integer: 1 2 3 4 5
     First element: 1
     Second element: 2
     ```
-
     - 4th
     ```
     Enter 5 Integer: -1 -5 -3 -2 -4
@@ -187,7 +171,6 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
     - syntax of double pointer
     
     int **pp = &p;
-    
     ```
 
     Code:
@@ -198,13 +181,11 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
         int num;
         int *p = &num;
         int **pp = &p;
-        scanf("Enter an number: %d",&num)
+        printf("Enter an number: ");
+        scanf("%d",&num);
         printf("Value of num using double pointer: %d\n", **pp);
         return 0;
     }
-    
-
-
     ```
 
     test cases:
@@ -212,13 +193,11 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
     ```
     Enter two integers: 30
     Value of num using double pointer: 30
-    
     ```
     - 2nd
     ```
     Enter two integers: 1
     Value of num using double pointer: 1
-    
     ```
 
     - 3rd
@@ -242,12 +221,11 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
     - syntax of pointer arithmetic
     
     pointer++;
-
     ```
 
     Code:
     ```
-    #include <stdio.h>
+   #include <stdio.h>
 
     int main() {
         int arr[5];
@@ -259,12 +237,11 @@ Codelab is initiative taken by our prof. Mosin Hasan sir.
             scanf("%d", ptr + i); 
         }
         
-        p++;  // Move to the next element
+        ptr++;  // Move to the next element
         
         printf("Second element: %d\n", *ptr);
         return 0;
     }
-
     ```
 
     test cases:
